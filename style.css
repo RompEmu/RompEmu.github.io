@@ -15,8 +15,10 @@ body {
   color: var(--text);
   font: 400 1.0625rem/1.55 var(--font);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
+
+html { overflow-x: clip; }
+main { overflow-x: clip; }
 
 a { color: inherit; }
 img { display: block; max-width: 100%; height: auto; }
@@ -98,7 +100,7 @@ h1 {
 .shelf-track {
   display: flex;
   width: max-content;
-  animation: slide 70s linear infinite;
+  animation: slide 90s linear infinite;
 }
 
 .shelf:hover .shelf-track { animation-play-state: paused; }
@@ -106,12 +108,12 @@ h1 {
 .shelf-row {
   display: flex;
   align-items: flex-end;
-  gap: 3.5rem;
-  padding-right: 3.5rem;
+  gap: 3rem;
+  padding-right: 3rem;
 }
 
-.shelf-row img { height: 150px; width: auto; max-width: none; }
-.shelf-row img.hand { height: 110px; }
+.shelf-row img { height: 112px; width: auto; max-width: none; }
+.shelf-row img.hand { height: 84px; }
 
 @keyframes slide {
   to { transform: translateX(-50%); }
@@ -146,6 +148,7 @@ h2 {
 
 .row p { margin: 0; color: var(--muted); max-width: 34ch; }
 
+.row.flip { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
 .row.flip img { order: 2; }
 
 .facts {
@@ -203,8 +206,9 @@ footer p { margin: 0; }
   .row { grid-template-columns: 1fr; padding-top: 4rem; }
   .row.flip img { order: 0; }
   .facts ul { grid-template-columns: 1fr; }
-  .shelf-row img { height: 110px; }
-  .shelf-row img.hand { height: 80px; }
+  .row.flip { grid-template-columns: 1fr; }
+  .shelf-row img { height: 80px; }
+  .shelf-row img.hand { height: 60px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

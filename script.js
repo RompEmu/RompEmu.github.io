@@ -9,6 +9,9 @@ fetch("https://api.github.com/repos/RompEmu/RompEmu/releases/latest")
   .then(r => r.ok ? r.json() : null)
   .then(release => {
     if (!release) return;
+    const tag = document.querySelector("[data-tag]");
+    tag.textContent = release.tag_name;
+    tag.hidden = false;
     for (const p of document.querySelectorAll("[data-version]")) {
       p.textContent = `Version ${release.tag_name.replace(/^v/, "")} · macOS, Windows, Linux`;
     }

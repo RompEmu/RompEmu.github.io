@@ -73,6 +73,19 @@ img { display: block; max-width: 100%; height: auto; }
   text-decoration: none;
 }
 
+.brand { display: flex; align-items: center; gap: .75rem; }
+
+.tag {
+  padding: .3rem .45rem .2rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font: 400 .8125rem/1 var(--display);
+  text-decoration: none;
+}
+
+.tag:hover { color: var(--text); border-color: var(--muted); }
+
 .top nav { display: flex; gap: 2rem; font-weight: 500; font-size: 1rem; }
 .top nav a { text-decoration: none; color: var(--muted); }
 .top nav a:hover { color: var(--text); }

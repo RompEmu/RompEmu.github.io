@@ -173,14 +173,17 @@ h2 {
 
 .download {
   display: grid;
-  justify-items: start;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
   max-width: 1240px;
   margin: 0 auto;
-  padding: 8rem 1.5rem 6rem;
+  padding: 9rem 1.5rem 7rem;
 }
 
-.download img { margin-bottom: 1.5rem; }
-.download > p:first-of-type { margin: 0 0 2rem; color: var(--muted); }
+.download h2 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; }
+.download div > p:first-of-type { margin: 0 0 2rem; color: var(--muted); }
+.download .small { margin-top: .6rem; }
 
 code {
   font: .85em ui-monospace, "SF Mono", Menlo, monospace;
@@ -207,6 +210,8 @@ footer p { margin: 0; }
   .row.flip img { order: 0; }
   .facts ul { grid-template-columns: 1fr; }
   .row.flip { grid-template-columns: 1fr; }
+  .download { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 6rem; }
+  .download img { width: 120px; }
   .shelf-row img { height: 80px; }
   .shelf-row img.hand { height: 60px; }
 }

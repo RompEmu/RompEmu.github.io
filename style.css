@@ -100,16 +100,22 @@ h1 {
 
 .button {
   display: inline-block;
-  padding: .85rem 1.6rem;
-  border-radius: 999px;
+  padding: .9rem 1.5rem .8rem;
+  border-radius: 4px;
   background: var(--orange);
   color: #1a1206;
-  font-weight: 600;
-  font-size: 1.0625rem;
+  font: 400 1.25rem/1 var(--display);
   text-decoration: none;
+  box-shadow: inset 0 -4px 0 #c86a14, 0 4px 0 #7a3f0a;
+  transition: transform .06s, box-shadow .06s;
 }
 
-.button:hover { background: #ffb066; }
+.button:hover { background: #ffab5c; }
+
+.button:active {
+  transform: translateY(4px);
+  box-shadow: inset 0 -2px 0 #c86a14, 0 0 0 #7a3f0a;
+}
 
 .small { margin: 1rem 0 0; color: var(--muted); font-size: .9375rem; }
 

@@ -1,10 +1,10 @@
 :root {
   --bg: #111215;
   --text: #ecebe7;
-  --muted: #8d8f96;
+  --muted: #9a9ca3;
   --line: #24262c;
   --orange: #ff9b3d;
-  --font: "Schibsted Grotesk", system-ui, sans-serif;
+  --font: "General Sans", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -13,14 +13,17 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font: 400 1.0625rem/1.55 var(--font);
+  font: 400 1.0625rem/1.6 var(--font);
   -webkit-font-smoothing: antialiased;
 }
 
 html { overflow-x: clip; }
 main { overflow-x: clip; }
 
-a { color: inherit; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+
+h1, h2 { text-wrap: balance; }
+p { text-wrap: pretty; }
 img { display: block; max-width: 100%; height: auto; }
 
 .top {
@@ -36,8 +39,9 @@ img { display: block; max-width: 100%; height: auto; }
   display: flex;
   align-items: center;
   gap: .6rem;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.2rem;
+  letter-spacing: -.01em;
   text-decoration: none;
 }
 
@@ -58,9 +62,9 @@ img { display: block; max-width: 100%; height: auto; }
 h1 {
   margin: 0 0 1.25rem;
   font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.02;
-  font-weight: 800;
-  letter-spacing: -.035em;
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -.03em;
 }
 
 .hero-text > p:first-of-type { margin: 0 0 2rem; color: var(--muted); font-size: 1.15rem; max-width: 30ch; }
@@ -71,7 +75,7 @@ h1 {
   border-radius: 999px;
   background: var(--orange);
   color: #1a1206;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -121,8 +125,8 @@ h2 {
   margin: 0 0 .75rem;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   line-height: 1.1;
-  font-weight: 800;
-  letter-spacing: -.03em;
+  font-weight: 600;
+  letter-spacing: -.025em;
 }
 
 .row {
@@ -184,9 +188,9 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: .5rem 2rem;
-  max-width: 1240px;
+  width: min(100% - 3rem, 1192px);
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem;
+  padding: 2rem 0 3rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
   font-size: .875rem;

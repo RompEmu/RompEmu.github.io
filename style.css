@@ -91,6 +91,8 @@ img { display: block; max-width: 100%; height: auto; }
 .top nav a:hover { color: var(--text); }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 6fr) minmax(0, 8fr);
   align-items: center;
@@ -98,6 +100,24 @@ img { display: block; max-width: 100%; height: auto; }
   max-width: 1240px;
   margin: 0 auto;
   padding: 5rem 1.5rem 6rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -6rem;
+  bottom: -2rem;
+  left: 50%;
+  width: 100vw;
+  translate: -50% 0;
+  background:
+    linear-gradient(90deg, var(--bg) 8%, rgb(17 18 21 / .55) 45%, transparent 75%),
+    url("img/wall.webp") center / cover;
+  opacity: .3;
+  filter: saturate(.8) blur(1.5px);
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 50% 45%, #000 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 70% 65% at 50% 45%, #000 20%, transparent 80%);
 }
 
 h1 {
@@ -133,6 +153,7 @@ h1 {
 .small { margin: 1rem 0 0; color: var(--muted); font-size: .9375rem; }
 
 .hero-shot {
+  filter: drop-shadow(0 30px 60px rgb(0 0 0 / .6));
   width: 135%;
   max-width: none;
   margin: -3rem 0 -4rem -2rem;

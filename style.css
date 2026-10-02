@@ -1,0 +1,212 @@
+:root {
+  --bg: #111215;
+  --text: #ecebe7;
+  --muted: #8d8f96;
+  --line: #24262c;
+  --orange: #ff9b3d;
+  --font: "Schibsted Grotesk", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 1.0625rem/1.55 var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.top nav { display: flex; gap: 1.75rem; font-weight: 500; font-size: .95rem; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--text); }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 8fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -.035em;
+}
+
+.hero-text > p:first-of-type { margin: 0 0 2rem; color: var(--muted); font-size: 1.15rem; max-width: 30ch; }
+
+.button {
+  display: inline-block;
+  padding: .85rem 1.6rem;
+  border-radius: 999px;
+  background: var(--orange);
+  color: #1a1206;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover { background: #ffb066; }
+
+.small { margin: .9rem 0 0; color: var(--muted); font-size: .85rem; }
+
+.hero-shot {
+  width: 135%;
+  max-width: none;
+  margin: -3rem 0 -4rem -2rem;
+}
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; padding-top: 3rem; }
+  .hero-shot { width: 115%; margin: 0 0 0 -5%; }
+}
+
+.shelf {
+  background: #e9e6df;
+  color: #1b1c1f;
+  padding: 3.5rem 0 2.25rem;
+  overflow: hidden;
+}
+
+.shelf-track {
+  display: flex;
+  width: max-content;
+  animation: slide 70s linear infinite;
+}
+
+.shelf:hover .shelf-track { animation-play-state: paused; }
+
+.shelf-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.shelf-row img { height: 150px; width: auto; max-width: none; }
+.shelf-row img.hand { height: 110px; }
+
+@keyframes slide {
+  to { transform: translateX(-50%); }
+}
+
+.shelf p {
+  max-width: 1240px;
+  margin: 2.75rem auto 0;
+  padding: 0 1.5rem;
+  font-weight: 500;
+}
+
+.shelf p a { color: #1b1c1f; margin-left: .5rem; }
+
+h2 {
+  margin: 0 0 .75rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -.03em;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 0;
+}
+
+.row p { margin: 0; color: var(--muted); max-width: 34ch; }
+
+.row.flip img { order: 2; }
+
+.facts {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 7rem 1.5rem 0;
+}
+
+.facts ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 3rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.facts li {
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.download {
+  display: grid;
+  justify-items: start;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8rem 1.5rem 6rem;
+}
+
+.download img { margin-bottom: 1.5rem; }
+.download > p:first-of-type { margin: 0 0 2rem; color: var(--muted); }
+
+code {
+  font: .85em ui-monospace, "SF Mono", Menlo, monospace;
+  color: var(--text);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .5rem 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+footer p { margin: 0; }
+
+@media (max-width: 860px) {
+  .row { grid-template-columns: 1fr; padding-top: 4rem; }
+  .row.flip img { order: 0; }
+  .facts ul { grid-template-columns: 1fr; }
+  .shelf-row img { height: 110px; }
+  .shelf-row img.hand { height: 80px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shelf-track { animation: none; }
+}

@@ -173,6 +173,31 @@ h1 {
   margin: -3rem 0 -4rem -2rem;
 }
 
+.lost {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / .03) 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse 60% 50% at 50% 45%, rgb(255 155 61 / .08), transparent 70%),
+    var(--bg);
+}
+
+.lost .top { width: 100%; }
+
+.lost-main {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0;
+  padding: 2rem 1.5rem 6rem;
+  text-align: center;
+}
+
+.lost-main h1 { margin-bottom: 1rem; }
+.lost-main > p:not(.eyebrow) { margin: 0 0 2rem; color: var(--muted); font-size: 1.1875rem; max-width: 32ch; }
+
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding-top: 3rem; }
   .hero-shot { width: 115%; margin: 0 0 0 -5%; }

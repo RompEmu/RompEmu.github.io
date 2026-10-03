@@ -97,7 +97,7 @@ img { display: block; max-width: 100%; height: auto; }
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 6fr) minmax(0, 8fr);
+  grid-template-columns: minmax(0, 8fr) minmax(0, 8fr);
   align-items: center;
   gap: 3rem;
   max-width: 1240px;
@@ -127,10 +127,11 @@ img { display: block; max-width: 100%; height: auto; }
 h1 {
   margin: 0 0 1.25rem;
   font-family: var(--display);
-  font-size: clamp(2.75rem, 5.4vw, 4.75rem);
+  font-size: clamp(2.55rem, 5.4vw, 4rem);
   line-height: 1;
   font-weight: 400;
   letter-spacing: -.015em;
+  text-transform: uppercase;
 }
 
 .hero-text > p:first-of-type { margin: 0 0 2.25rem; color: var(--muted); font-size: 1.25rem; line-height: 1.55; max-width: 30ch; }

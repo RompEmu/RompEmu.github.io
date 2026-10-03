@@ -172,7 +172,7 @@ h1 {
 .shelf {
   background: #1a1b20;
   border-block: 1px solid var(--line);
-  padding: 4.5rem 0 3rem;
+  padding: 5.5rem 0 2.25rem;
   overflow: hidden;
 }
 
@@ -204,7 +204,7 @@ h1 {
 .console:hover img { transform: translateY(-6px); }
 
 .console::after {
-  content: attr(data-name);
+  content: attr(data-name) "\A" attr(data-emu);
   position: absolute;
   left: 50%;
   bottom: calc(100% + 1rem);
@@ -212,14 +212,25 @@ h1 {
   border-radius: 4px;
   background: var(--text);
   color: var(--bg);
-  font: 400 .9375rem/1 var(--display);
-  white-space: nowrap;
+  font: 400 .9375rem/1.35 var(--display);
+  white-space: pre;
+  text-align: center;
   box-shadow: 0 3px 0 rgb(0 0 0 / .35);
   opacity: 0;
   translate: -50% 6px;
   transition: opacity .15s, translate .15s;
   pointer-events: none;
 }
+
+.shelf-link {
+  max-width: 1240px;
+  margin: 2.25rem auto 0;
+  padding: 0 1.5rem;
+  font-size: .9375rem;
+}
+
+.shelf-link a { color: var(--muted); }
+.shelf-link a:hover { color: var(--text); }
 
 .console:hover::after { opacity: 1; translate: -50% 0; }
 

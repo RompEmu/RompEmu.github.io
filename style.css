@@ -32,6 +32,7 @@
   --line: #24262c;
   --orange: #ff9b3d;
   --gold: #f4c542;
+  --focus: #5ac8fa;
   --font: "Uncut Sans", system-ui, sans-serif;
   --display: "VG5000", "Uncut Sans", sans-serif;
 }
@@ -50,6 +51,14 @@ html { overflow-x: clip; }
 main { overflow-x: clip; }
 
 a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.button:focus-visible { outline-offset: 4px; }
 
 h1, h2 { text-wrap: balance; }
 p { text-wrap: pretty; }

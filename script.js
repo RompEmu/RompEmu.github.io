@@ -5,7 +5,7 @@ if (os) {
   for (const a of document.querySelectorAll("[data-os-label]")) a.textContent = `Download for ${os}`;
 }
 
-fetch("https://api.github.com/repos/RompEmu/RompEmu/releases/latest")
+fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
   .then(r => r.ok ? r.json() : null)
   .then(release => {
     if (!release) return;

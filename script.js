@@ -13,7 +13,7 @@ fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
     tag.textContent = release.tag_name;
     tag.hidden = false;
     for (const p of document.querySelectorAll("[data-version]")) {
-      p.textContent = `Version ${release.tag_name.replace(/^v/, "")} · macOS, Windows, Linux`;
+      p.textContent = `Version ${release.tag_name.replace(/^v/, "")} for macOS, Windows and Linux`;
     }
   })
   .catch(() => {});

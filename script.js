@@ -17,3 +17,15 @@ fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
     }
   })
   .catch(() => {});
+
+for (const switcher of document.querySelectorAll(".switcher")) {
+  const buttons = switcher.querySelectorAll("button[data-look]");
+  for (const button of buttons) {
+    button.addEventListener("click", () => {
+      for (const b of buttons) b.setAttribute("aria-pressed", String(b === button));
+      for (const img of switcher.querySelectorAll("img[data-look]")) {
+        img.classList.toggle("is-on", img.dataset.look === button.dataset.look);
+      }
+    });
+  }
+}

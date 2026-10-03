@@ -126,13 +126,40 @@
     </div>
   </section>
 
-  <section class="row flip">
-    <div class="shot" style="--src: url(img/crt.webp)">
-      <img class="framed" src="img/crt.webp" width="1600" height="1004" loading="lazy" alt="Super Mario Bros. on a curved CRT screen">
+  <section class="looks">
+    <div class="looks-head">
+      <h2>A look for every console</h2>
+      <p>Each console starts with the screen it was played on. Change it any time from the game menu.</p>
     </div>
-    <div>
-      <h2>The screen you remember</h2>
-      <p>Each console starts with the screen it was played on. An old TV, a Game Boy screen, or sharp pixels.</p>
+    <div class="looks-grid">
+      <figure class="switcher">
+        <div class="stage">
+        <img class="look is-on" data-look="look-crt-tv" src="img/look-crt-tv-1600.webp" srcset="img/look-crt-tv-800.webp 800w, img/look-crt-tv-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1058" loading="lazy" alt="Comix Zone with the CRT TV look">
+        <img class="look" data-look="look-crt-monitor" src="img/look-crt-monitor-1600.webp" srcset="img/look-crt-monitor-800.webp 800w, img/look-crt-monitor-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1058" loading="lazy" alt="Comix Zone with the CRT monitor look">
+        <img class="look" data-look="look-sharp" src="img/look-sharp-1600.webp" srcset="img/look-sharp-800.webp 800w, img/look-sharp-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1058" loading="lazy" alt="Comix Zone with the Sharp pixels look">
+        <img class="look" data-look="look-smooth" src="img/look-smooth-1600.webp" srcset="img/look-smooth-800.webp 800w, img/look-smooth-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 50vw" width="1600" height="1058" loading="lazy" alt="Comix Zone with the Smooth look">
+        </div>
+        <div class="tabs" role="group" aria-label="Genesis looks">
+        <button type="button" data-look="look-crt-tv" aria-pressed="true">CRT TV</button>
+        <button type="button" data-look="look-crt-monitor" aria-pressed="false">CRT monitor</button>
+        <button type="button" data-look="look-sharp" aria-pressed="false">Sharp pixels</button>
+        <button type="button" data-look="look-smooth" aria-pressed="false">Smooth</button>
+        </div>
+        <figcaption>Comix Zone on a Genesis</figcaption>
+      </figure>
+      <figure class="switcher">
+        <div class="stage">
+        <img class="look is-on" data-look="look-gb-pocket" src="img/look-gb-pocket-1200.webp" srcset="img/look-gb-pocket-600.webp 600w, img/look-gb-pocket-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="962" loading="lazy" alt="Tetris with the Pocket look">
+        <img class="look" data-look="look-gb-green" src="img/look-gb-green-1200.webp" srcset="img/look-gb-green-600.webp 600w, img/look-gb-green-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="962" loading="lazy" alt="Tetris with the Original green look">
+        <img class="look" data-look="look-gb-backlit" src="img/look-gb-backlit-1200.webp" srcset="img/look-gb-backlit-600.webp 600w, img/look-gb-backlit-1200.webp 1200w" sizes="(max-width: 860px) 100vw, 50vw" width="1200" height="962" loading="lazy" alt="Tetris with the Backlit look">
+        </div>
+        <div class="tabs" role="group" aria-label="Game Boy screens">
+        <button type="button" data-look="look-gb-pocket" aria-pressed="true">Pocket</button>
+        <button type="button" data-look="look-gb-green" aria-pressed="false">Original green</button>
+        <button type="button" data-look="look-gb-backlit" aria-pressed="false">Backlit</button>
+        </div>
+        <figcaption>Tetris on a Game Boy</figcaption>
+      </figure>
     </div>
   </section>
 

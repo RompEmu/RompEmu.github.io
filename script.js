@@ -5,15 +5,44 @@ if (os) {
   for (const a of document.querySelectorAll("[data-os-label]")) a.textContent = `Download for ${os}`;
 }
 
+const builds = [
+  { os: "Mac", label: "Mac with Apple silicon", match: /macos.*\.zip$/ },
+  { os: "Windows", label: "Windows", match: /windows.*\.zip$/ },
+  { os: "Linux", label: "Linux", match: /linux.*\.AppImage$/ },
+];
+
 fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
   .then(r => r.ok ? r.json() : null)
   .then(release => {
     if (!release) return;
+    const version = release.tag_name.replace(/^v/, "");
     const tag = document.querySelector("[data-tag]");
     tag.textContent = release.tag_name;
     tag.hidden = false;
+
+    const url = build => release.assets.find(a => build.match.test(a.name))?.browser_download_url;
+    const mine = builds.find(b => b.os === os);
+    const direct = mine && url(mine);
+    if (direct) {
+      for (const a of document.querySelectorAll("[data-os-label]")) a.href = direct;
+    }
     for (const p of document.querySelectorAll("[data-version]")) {
-      p.textContent = `Version ${release.tag_name.replace(/^v/, "")} for macOS, Windows and Linux`;
+      p.textContent = direct ? `Version ${version} for ${mine.label}` : `Version ${version} for macOS, Windows and Linux`;
+    }
+
+    const others = document.querySelector("[data-others]");
+    for (const build of builds) {
+      if (build === mine && direct) continue;
+      const href = url(build);
+      if (!href) continue;
+      const a = document.createElement("a");
+      a.href = href;
+      a.textContent = build.os;
+      others.append(a);
+    }
+    if (others.children.length) {
+      others.prepend(direct ? "Also for " : "Download for ");
+      others.hidden = false;
     }
   })
   .catch(() => {});

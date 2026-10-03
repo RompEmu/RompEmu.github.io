@@ -466,6 +466,8 @@ footer {
   font-size: .875rem;
 }
 
+.others a { margin-right: .9rem; }
+
 footer p { margin: 0; }
 footer p a { margin-left: .9rem; }
 

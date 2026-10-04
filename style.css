@@ -476,6 +476,9 @@ h2 {
 
 .cores li:hover { color: var(--orange); border-color: #5a3a1c; }
 
+.cores .more { padding: 0; border-color: #5a3a1c; }
+.cores .more a { display: block; padding: .45rem .7rem .35rem; color: var(--orange); text-decoration: none; }
+
 .cores-note { margin: 1.25rem 0 0; color: #6b6e75; font-size: .9375rem; }
 
 .feature {

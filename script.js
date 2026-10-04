@@ -8,7 +8,7 @@ if (os) {
 const builds = [
   { os: "Mac", label: "Mac with Apple silicon", match: /macos.*\.zip$/ },
   { os: "Windows", label: "Windows", match: /windows.*\.zip$/ },
-  { os: "Linux", label: "Linux", match: /linux.*\.AppImage$/ },
+  { os: "Linux", label: "Linux", match: /\.AppImage$/ },
 ];
 
 fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")

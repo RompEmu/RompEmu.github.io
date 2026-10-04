@@ -41,7 +41,7 @@
 }
 </script>
 <link rel="preload" href="fonts/vg5000.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261004">
+<link rel="stylesheet" href="style.css?v=20261004-2">
 </head>
 <body>
 
@@ -118,18 +118,58 @@
     <p class="shelf-link"><a href="https://github.com/RompEmu/RomP#supported-systems">See all supported systems</a></p>
   </section>
 
-  <section class="row">
-    <div class="shot" style="--src: url(img/play-800.webp)">
-      <img class="framed" src="img/play-1600.webp" srcset="img/play-800.webp 800w, img/play-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 60vw" width="1600" height="1004" loading="lazy" alt="Comix Zone running in its own window over the RomP library">
-    </div>
-    <div>
+  <section class="play">
+    <div class="play-head">
       <h2>Press Play</h2>
-      <p>RomP sets up the emulator for you. Games and BIOS files come from your RomM server, and games you download play offline.</p>
+      <p>RomP picks the right emulator for each console and sets it up for you. Games and BIOS files come from your RomM server, and games you download play offline.</p>
     </div>
+    <div class="shot play-shot" style="--src: url(img/play-800.webp)">
+      <img class="framed" src="img/play-1600.webp" srcset="img/play-800.webp 800w, img/play-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 1000px" width="1600" height="1004" loading="lazy" alt="Comix Zone running in its own window over the RomP library">
+    </div>
+    <ul class="cores" aria-label="Emulators RomP sets up">
+      <li>FinalBurn Neo</li>
+      <li>Stella</li>
+      <li>Virtual Jaguar</li>
+      <li>Beetle Lynx</li>
+      <li>Beetle WonderSwan</li>
+      <li>Gearcoleco</li>
+      <li>VICE</li>
+      <li>PUAE</li>
+      <li>DOSBox Pure</li>
+      <li>FreeIntv</li>
+      <li>O2EM</li>
+      <li>blueMSX</li>
+      <li>Beetle PCE</li>
+      <li>Nestopia UE</li>
+      <li>Snes9x</li>
+      <li>Mupen64Plus-Next</li>
+      <li>mGBA</li>
+      <li>melonDS DS</li>
+      <li>Dolphin</li>
+      <li>Beetle VB</li>
+      <li>SAME CDi</li>
+      <li>Opera</li>
+      <li>Genesis Plus GX</li>
+      <li>PicoDrive</li>
+      <li>Beetle Saturn</li>
+      <li>Flycast</li>
+      <li>Beetle NeoPop</li>
+      <li>Beetle PSX HW</li>
+      <li>PCSX2</li>
+      <li>ARMSX2</li>
+      <li>RPCS3</li>
+      <li>PPSSPP</li>
+      <li>Vecx</li>
+      <li>xemu</li>
+      <li>Fuse</li>
+    </ul>
+    <p class="cores-note">Most are libretro cores. xemu and RPCS3 run as their own apps.</p>
   </section>
 
-  <section class="looks">
+  <section class="looks feature">
+    <div class="decor crt" aria-hidden="true"></div>
     <div class="looks-head">
+      <p class="eyebrow">Looks</p>
       <h2>A look for every console</h2>
       <p>Each console starts with the screen it was played on. Change it any time from the game menu.</p>
     </div>
@@ -165,8 +205,8 @@
     </div>
   </section>
 
-  <section class="cheevos">
-    <div class="badges" aria-hidden="true">
+  <section class="cheevos feature">
+    <div class="decor badges" aria-hidden="true">
       <img src="img/badge-0.png" alt=""><img src="img/badge-1.png" alt=""><img src="img/badge-2.png" alt=""><img src="img/badge-3.png" alt=""><img src="img/badge-4.png" alt="">
     </div>
     <div class="cheevos-text">
@@ -182,7 +222,8 @@
     </div>
   </section>
 
-  <section class="row">
+  <section class="row feature saves">
+    <div class="decor minis" aria-hidden="true"><img src="img/save-mini-0.png" alt=""><img src="img/save-mini-1.png" alt=""></div>
     <div class="shot" style="--src: url(img/save-states.webp)">
       <picture>
         <source media="(max-width: 600px)" srcset="img/save-states-phone.webp" width="697" height="371">
@@ -190,16 +231,19 @@
       </picture>
     </div>
     <div>
+      <p class="eyebrow">Save states</p>
       <h2>Save anywhere</h2>
       <p>Each save state has a picture of the moment. Saves sync with RomM, so you can continue on another computer.</p>
     </div>
   </section>
 
-  <section class="row flip">
+  <section class="row flip feature ds">
+    <div class="decor handheld" aria-hidden="true"><img src="img/consoles/ds.webp" alt=""></div>
     <div class="shot" style="--src: url(img/ds-800.webp)">
       <img class="framed" src="img/ds-1600.webp" srcset="img/ds-800.webp 800w, img/ds-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 60vw" width="1600" height="1004" loading="lazy" alt="Spyro: Shadow Legacy with its two screens in two windows">
     </div>
     <div>
+      <p class="eyebrow">Nintendo DS</p>
       <h2>Two screens for DS</h2>
       <p>Each screen gets its own window. The mouse is the pen.</p>
     </div>
@@ -239,7 +283,7 @@
   <p class="byline">A project by <a href="https://beshr.com">Beshr</a></p>
 </footer>
 
-<script src="script.js?v=20261004" defer></script>
+<script src="script.js?v=20261004-2" defer></script>
 
 <script data-goatcounter="https://romp.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

@@ -133,6 +133,12 @@ img { display: block; max-width: 100%; height: auto; }
   mask-image: radial-gradient(ellipse 70% 65% at 50% 45%, #000 20%, transparent 80%);
 }
 
+.hero-mark {
+  width: 160px;
+  height: 160px;
+  margin: -1.5rem 0 .75rem -1.25rem;
+}
+
 h1 {
   margin: 0 0 1.25rem;
   font-family: var(--display);
@@ -476,20 +482,6 @@ h2 {
   mask-image: radial-gradient(ellipse 60% 70% at 25% 55%, #000, transparent 75%);
 }
 
-.glow { position: relative; display: block; }
-
-.glow::before {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  inset: 10%;
-  z-index: -1;
-  border-radius: 50%;
-  background: var(--orange);
-  filter: blur(70px);
-  opacity: .28;
-}
-
 .download h2 { font-size: clamp(2.75rem, 5.4vw, 4.75rem); line-height: 1; }
 .download div > p:first-of-type { margin: 0 0 2rem; color: var(--muted); }
 .download .small { margin-top: .6rem; }
@@ -535,7 +527,8 @@ footer p a { margin-left: .9rem; }
   .looks-grid { grid-template-columns: 1fr; }
   .cheevos { grid-template-columns: 1fr; margin-top: 4rem; padding-block: 3rem; }
   .download { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 6rem; }
-  .download .glow img { width: 120px; }
+  .download-mark { width: 140px; height: 140px; }
+  .hero-mark { width: 120px; height: 120px; margin: -1rem 0 .5rem -1rem; }
   .console img { height: 80px; }
   .console.hand img { height: 60px; }
 }

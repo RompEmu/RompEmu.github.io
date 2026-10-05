@@ -176,12 +176,8 @@ img { display: block; max-width: 100%; height: auto; }
   width: 220px;
   height: 220px;
   margin-bottom: .25rem;
-  animation: bob 6s ease-in-out infinite;
 }
 
-@keyframes bob {
-  50% { transform: translateY(-8px); }
-}
 
 h1 {
   margin: 0 0 1.25rem;
@@ -677,5 +673,4 @@ footer p a { margin-left: .9rem; }
 
 @media (prefers-reduced-motion: reduce) {
   .shelf-track { animation: none; }
-  .hero-mark { animation: none; }
 }

@@ -487,6 +487,9 @@ h2 {
 
 .play-shot { width: min(100%, 1000px); margin-top: 3.5rem; }
 
+/* Follows Press Play, so it needs less room above. */
+.romm { padding-top: 1rem; }
+
 .cores {
   display: flex;
   flex-wrap: wrap;

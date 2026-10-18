@@ -16,10 +16,13 @@ if (os) {
   for (const a of document.querySelectorAll("[data-os-label]")) a.textContent = `Download for ${os}`;
 }
 
+// The first build for each system is the one its Download button gets; the rest are offered beside it.
 const builds = [
-  { os: "Mac", label: "Mac with Apple silicon", match: /macos.*\.zip$/ },
-  { os: "Windows", label: "Windows", match: /windows.*\.zip$/ },
-  { os: "Linux", label: "Linux", match: /\.AppImage$/ },
+  { os: "Mac", label: "Mac with Apple silicon", name: "Mac", match: /macos.*\.zip$/ },
+  { os: "Windows", label: "Windows", name: "Windows", match: /windows.*\.zip$/ },
+  { os: "Linux", label: "Linux", name: "Linux AppImage", match: /\.AppImage$/ },
+  { os: "Linux", label: "Debian and Ubuntu", name: ".deb", match: /\.deb$/ },
+  { os: "Linux", label: "Fedora and openSUSE", name: ".rpm", match: /\.rpm$/ },
 ];
 
 fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
@@ -48,7 +51,7 @@ fetch("https://api.github.com/repos/RompEmu/RomP/releases/latest")
       if (!href) continue;
       const a = document.createElement("a");
       a.href = href;
-      a.textContent = build.os;
+      a.textContent = build.name;
       others.append(a);
     }
     if (others.children.length) {

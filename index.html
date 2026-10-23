@@ -30,9 +30,13 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "RomP",
-  "description": "Play your RomM library.",
+  "description": "A free, open source desktop app for macOS, Windows and Linux that plays the games in your RomM library. It downloads each game and the right emulator, and syncs in-game saves and save states with RomM.",
   "applicationCategory": "GameApplication",
   "operatingSystem": "macOS, Windows, Linux",
+  "isAccessibleForFree": true,
+  "featureList": "Plays a RomM library; installs emulators automatically; syncs saves and save states with RomM; offline play; RetroAchievements; controller support; each game sandboxed",
+  "softwareRequirements": "A RomM server, version 5.0 or newer",
+  "sameAs": ["https://github.com/RompEmu/RomP"],
   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
   "url": "https://rompemu.github.io/",
   "downloadUrl": "https://github.com/RompEmu/RomP/releases/latest",
@@ -41,7 +45,7 @@
 }
 </script>
 <link rel="preload" href="fonts/vg5000.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="style.css?v=20261018-1">
+<link rel="stylesheet" href="style.css?v=20261023-1">
 </head>
 <body>
 
@@ -56,6 +60,7 @@
     <a class="tag" href="https://github.com/RompEmu/RomP/releases/latest" data-tag hidden></a>
   </div>
   <nav>
+    <a href="/faq/">FAQ</a>
     <a href="https://github.com/RompEmu/RomP">GitHub</a>
     <a href="#download">Download</a>
   </nav>
@@ -120,7 +125,7 @@
         <span class="console" data-name="PlayStation 3" data-emu="RPCS3"><img src="img/consoles/ps3.webp" alt="" loading="lazy"></span>
       </div>
     </div>
-    <p class="shelf-link">New: Atari 7800, 5200, 8-bit and ST, Atari Jaguar CD, Amstrad CPC, Commodore VIC-20, Plus/4 and 128, Amiga CD32 and CDTV, Neo Geo CD, PC-FX, Pokémon Mini, Game &amp; Watch, Watara Supervision, Mega Duck, Fairchild Channel F, TIC-80 and PICO-8.<br><a href="https://github.com/RompEmu/RomP#supported-systems">See all supported systems</a></p>
+    <p class="shelf-link">New: Atari 7800, 5200, 8-bit and ST, Atari Jaguar CD, Amstrad CPC, Commodore VIC-20, Plus/4 and 128, Amiga CD32 and CDTV, Neo Geo CD, PC-FX, Pokémon Mini, Game &amp; Watch, Watara Supervision, Mega Duck, Fairchild Channel F, TIC-80 and PICO-8.<br><a href="/systems/">See all supported systems</a></p>
   </section>
 
   <section class="play">
@@ -144,7 +149,7 @@
       <li>mGBA</li>
       <li>melonDS DS</li>
       <li>PPSSPP</li>
-      <li class="more"><a href="https://github.com/RompEmu/RomP#supported-systems">Many more</a></li>
+      <li class="more"><a href="/systems/">Many more</a></li>
     </ul>
     <p class="cores-note">Most run as libretro cores. ARMSX2 and FAKE-08, for PICO-8, come from RomP's own builds. xemu and RPCS3 run as standalone apps.</p>
   </section>
@@ -230,7 +235,7 @@
     <div>
       <p class="eyebrow">Save states</p>
       <h2>Save anywhere</h2>
-      <p>Each save state has a picture of the moment. Saves sync with RomM, so you can continue on another computer.</p>
+      <p>Each save state has a picture of the moment. Saves sync with RomM, so you can continue on another computer. <a href="/saves/">How save sync works</a></p>
     </div>
   </section>
 
@@ -271,13 +276,13 @@
       <p class="small" data-version>macOS, Windows, Linux</p>
       <p class="small others" data-others hidden></p>
       <p class="small">Homebrew<br><code>brew install --cask rompemu/tap/romp</code></p>
-      <p class="small"><a href="https://github.com/RompEmu/RomP/releases/tag/nightly">Nightly build</a></p>
+      <p class="small"><a href="https://github.com/RompEmu/RomP/releases/tag/nightly">Nightly build</a> <a href="/install/">How to install</a></p>
     </div>
   </section>
 </main>
 
 <footer>
-  <p>RomP is GPL-3.0. <a href="https://github.com/RompEmu/RomP">Source</a> <a href="https://github.com/RompEmu/RomP/blob/main/CHANGELOG.md">Changelog</a></p>
+  <p>RomP is GPL-3.0. <a href="https://github.com/RompEmu/RomP">Source</a> <a href="https://github.com/RompEmu/RomP/blob/main/CHANGELOG.md">Changelog</a> <a href="/install/">Install</a> <a href="/systems/">Systems</a> <a href="/saves/">Save sync</a> <a href="/faq/">FAQ</a></p>
   <p>Console photos by Evan Amos, public domain.</p>
   <p class="byline">A project by <a href="https://beshr.com">Beshr</a></p>
 </footer>

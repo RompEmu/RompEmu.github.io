@@ -677,3 +677,52 @@ footer p a { margin-left: .9rem; }
 @media (prefers-reduced-motion: reduce) {
   .shelf-track { animation: none; }
 }
+
+.doc {
+  width: min(100% - 3rem, 760px);
+  margin: 0 auto;
+  padding: 3rem 0 6rem;
+}
+
+.doc h1 { font-size: clamp(2.5rem, 4.6vw, 3.75rem); line-height: 1.1; }
+.doc h2 { margin-top: 3rem; font-size: clamp(1.6rem, 2.6vw, 2rem); line-height: 1.15; }
+.doc h3 { margin: 2rem 0 .5rem; font-size: 1.1875rem; font-weight: 600; }
+.doc .lede { margin: 0 0 2rem; color: var(--muted); font-size: 1.25rem; }
+.doc p, .doc li { color: #cfcfcb; }
+.doc li + li { margin-top: .4rem; }
+.doc strong { color: var(--text); font-weight: 600; }
+.doc code { padding: .1em .35em; border-radius: 4px; background: #1c1e23; }
+
+.doc table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.doc th, .doc td {
+  padding: .6rem .75rem .6rem 0;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.doc th { color: var(--muted); font-weight: 500; }
+
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  margin: 4rem 0 0;
+  padding: 1.5rem 0 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.doc-nav a { color: var(--muted); }
+.doc-nav a:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .top nav { gap: 1.25rem; }
+  .doc table { font-size: .9375rem; }
+}

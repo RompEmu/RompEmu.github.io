@@ -112,6 +112,14 @@
     },
     {
       "@type": "Question",
+      "name": "How does RomP compare with OpenEmu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OpenEmu is a Mac app that brought an “it just works” approach to emulation: you drag your games in, it organises them, and you plug in a controller and play. RomP is inspired by that approach. The differences are that RomP runs on Windows and Linux as well as macOS, and that your games come from your RomM server instead of a library on one computer, so saves and save states follow you between computers through RomM."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is RomP safe to run with games and emulators from the internet?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -139,7 +147,7 @@
       "name": "Which languages is RomP in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "English, with French, Spanish, German and Arabic being translated by the people who use it, on Crowdin."
+        "text": "English, with French, Spanish, German and Arabic being translated by the people who use it, on Crowdin. To help with one of these, open the RomP project on Crowdin, choose the language and translate or vote on suggestions; a free Crowdin account is enough, and no programming is needed. To add a new language, open an issue on GitHub asking for it, and it will be added to Crowdin for you to translate."
       }
     },
     {
@@ -147,7 +155,7 @@
       "name": "Is there a version for phones or the web?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. RomP is a desktop app for macOS, Windows and Linux. On Android, Argosy is RomM's own app, and RomM has a web player built in."
+        "text": "Not for now: RomP is a desktop app for macOS, Windows and Linux. A full-screen TV mode is planned, for a computer under the TV that you use with only a controller, which also suits any computer set aside just for games. On Android, Argosy is RomM's own app, and RomM has a web player built in."
       }
     }
   ]
@@ -205,6 +213,9 @@
 <h2>How is RomP different from RetroArch?</h2>
 <p>RetroArch is a general emulator front end that you set up yourself. RomP uses many of the same libretro cores, but is built around a RomM library: it shows your server's games, downloads what you play, picks and sets up the emulator, and syncs your saves with RomM.</p>
 
+<h2>How does RomP compare with OpenEmu?</h2>
+<p><a href="https://openemu.org">OpenEmu</a> is a Mac app that brought an “it just works” approach to emulation: you drag your games in, it organises them, and you plug in a controller and play. RomP is inspired by that approach. The differences are that RomP runs on Windows and Linux as well as macOS, and that your games come from your RomM server instead of a library on one computer, so saves and save states follow you between computers through RomM.</p>
+
 <h2>Is RomP safe to run with games and emulators from the internet?</h2>
 <p>Each game runs in its own sandboxed process that can only write to that game's saves and its own temporary files, so a buggy or malicious emulator or ROM can't touch your other files or take RomP down with it. xemu and RPCS3 run outside the sandbox.</p>
 
@@ -215,10 +226,10 @@
 <p>No. RomP has no servers of its own and no analytics. It talks only to your RomM server, RetroAchievements if you sign in, and the places it downloads emulators and updates from. Its <a href="https://github.com/RompEmu/RomP/blob/main/PRIVACY.md">privacy policy</a> lists everything.</p>
 
 <h2>Which languages is RomP in?</h2>
-<p>English, with French, Spanish, German and Arabic being translated by the people who use it, on <a href="https://crowdin.com/project/romp">Crowdin</a>.</p>
+<p>English, with French, Spanish, German and Arabic being translated by the people who use it, on <a href="https://crowdin.com/project/romp">Crowdin</a>. To help with one of these, open the <a href="https://crowdin.com/project/romp">RomP project on Crowdin</a>, choose the language and translate or vote on suggestions; a free Crowdin account is enough, and no programming is needed. To add a new language, <a href="https://github.com/RompEmu/RomP/issues">open an issue on GitHub</a> asking for it, and it will be added to Crowdin for you to translate.</p>
 
 <h2>Is there a version for phones or the web?</h2>
-<p>No. RomP is a desktop app for macOS, Windows and Linux. On Android, <a href="https://github.com/rommapp/argosy-launcher">Argosy</a> is RomM's own app, and RomM has a web player built in.</p>
+<p>Not for now: RomP is a desktop app for macOS, Windows and Linux. A full-screen TV mode is planned, for a computer under the TV that you use with only a controller, which also suits any computer set aside just for games. On Android, <a href="https://github.com/rommapp/argosy-launcher">Argosy</a> is RomM's own app, and RomM has a web player built in.</p>
 
 <nav class="doc-nav" aria-label="More about RomP">
   <a href="/">What RomP is</a>

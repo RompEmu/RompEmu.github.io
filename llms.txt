@@ -9,7 +9,7 @@ RomM (https://romm.app) is a self-hosted server for a personal game collection. 
 - [Install](https://rompemu.github.io/install/): requirements and downloads for macOS, Windows and Linux, Homebrew, and connecting to a RomM server
 - [Supported systems](https://rompemu.github.io/systems/): every system RomP plays and the emulator it uses
 - [Save sync](https://rompemu.github.io/saves/): when saves sync, offline play, conflicts, saves shared with other apps, and limits
-- [Questions and answers](https://rompemu.github.io/faq/): what RomP is, cost, privacy, controllers, RetroAchievements, comparison with RetroArch
+- [Questions and answers](https://rompemu.github.io/faq/): what RomP is, cost, privacy, controllers, RetroAchievements, comparison with RetroArch and OpenEmu, translations, plans
 
 ## Facts
 
